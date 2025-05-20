@@ -1,21 +1,43 @@
-# CP3-ANDROID
-# 🛒 Android Lista de Compras
+# 🛒 CP3-ANDROID — Lista de Compras em Kotlin
 
-Projeto Android feito em Kotlin que permite adicionar e exibir produtos de uma lista de compras.
+Projeto Android feito em Kotlin que permite **adicionar**, **editar** e **exibir produtos** numa lista de compras de forma simples e prática.
 
-## 📂 Estrutura
+## 📂 Estrutura dos arquivos Kotlin
 
-### `MainActivity.kt`
-Responsável por iniciar a interface do usuário e gerenciar as interações com a lista.
+### 📱 `MainActivity.kt`
+Esse é o arquivo **principal**, o que bota tudo pra rodar.  
+Aqui rola:
+- A lista de produtos via **RecyclerView**.
+- Ações como **adicionar**, **editar** ou **remover** um item.
+- A conexão com o `Service.kt` pra puxar os dados.
 
-### `Model.kt`
-Define a classe `Produto`, usada para armazenar os dados dos itens da lista.
+💡 Resumo: mostra a lista, escuta os cliques e atualiza tudo em tempo real.
 
-### `Service.kt`
-Contém a lógica para adicionar, remover ou editar itens da lista.
+---
 
-### `Factory.kt`
-Cria e gerencia instâncias reutilizáveis, como listas ou objetos de suporte.
+### 📦 `Model.kt`
+Define a classe `Produto`, usada pra guardar os dados dos itens.
+
+Campos:
+- `id`: identifica cada produto (tipo CPF de item 🧾).
+- `nome`: o que você quer comprar (arroz, feijão, batata frita...).
+- `quantidade`: quantas unidades vai levar.
+
+---
+
+### 🛠️ `Service.kt`
+Aqui fica a lógica do app, o famoso “faz-tudo”:
+- Adiciona novos produtos
+- Remove produtos
+- Atualiza dados
+- Lista geral da compra
+
+---
+
+### 🧪 `Factory.kt`
+Responsável por criar e **reaproveitar instâncias** do `ProdutoService`.  
+Evita criar o mesmo objeto várias vezes — **injeção de dependência** na moral.
+
 
 ## 📸 Evidências
 
