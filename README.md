@@ -5,8 +5,7 @@ Projeto Android feito em Kotlin que permite **adicionar**, **editar** e **exibir
 ## 📂 Estrutura dos arquivos Kotlin
 
 ### 📱 `MainActivity.kt`
-Esse é o arquivo **principal**, o que bota tudo pra rodar.  
-Aqui rola:
+Esse é o arquivo **principal**.  
 - A lista de produtos via **RecyclerView**.
 - Ações como **adicionar**, **editar** ou **remover** um item.
 - A conexão com o `Service.kt` pra puxar os dados.
@@ -26,7 +25,7 @@ Campos:
 ---
 
 ### 🛠️ `Service.kt`
-Aqui fica a lógica do app, o famoso “faz-tudo”:
+Aqui fica a lógica do app:
 - Adiciona novos produtos
 - Remove produtos
 - Atualiza dados
@@ -36,7 +35,7 @@ Aqui fica a lógica do app, o famoso “faz-tudo”:
 
 ### 🧪 `Factory.kt`
 Responsável por criar e **reaproveitar instâncias** do `ProdutoService`.  
-Evita criar o mesmo objeto várias vezes — **injeção de dependência** na moral.
+Evita criar o mesmo objeto várias vezes 
 
 
 ## 📸 Evidências
